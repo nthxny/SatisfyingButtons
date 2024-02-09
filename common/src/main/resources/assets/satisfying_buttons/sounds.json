@@ -1,0 +1,13 @@
+{
+  "button_hover": {
+    "sounds": [
+      "satisfying_buttons:button_hover"
+    ]
+  },
+  "button_hover_reverse": {
+    "sounds": [
+      "satisfying_buttons:button_hover_reverse"
+    ]
+  }
+}
+

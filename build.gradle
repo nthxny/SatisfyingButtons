@@ -8,6 +8,7 @@ plugins {
 
 // These are the access wideners depending on the minecraft version
 def mcVersionToAccessWidenerVersion = [
+        "1.18.2": "1_18_2",
         "1.19.2": "1_19_2",
         "1.20.1": "1_20_1",
 ]
@@ -114,7 +115,6 @@ subprojects {
     dependencies {
         minecraft "com.mojang:minecraft:${rootProject.minecraft_version}"
         mappings(loom.layered {
-            it.mappings("org.quiltmc:quilt-mappings:${rootProject.minecraft_version}+build.${rootProject.quilt}:intermediary-v2")
             it.parchment("org.parchmentmc.data:parchment-${rootProject.minecraft_version}:${rootProject.parchment}@zip")
             it.officialMojangMappings { nameSyntheticMembers = false }
         })
@@ -127,7 +127,6 @@ subprojects {
 
         if (isForge) {
             modImplementation("me.shedaniel.cloth:cloth-config-forge:${rootProject.cloth_config_version}")
-            modRuntimeOnly("curse.maven:farmers-delight-398521:${rootProject.farmers_delight}")
         }
     }
 

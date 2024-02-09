@@ -21,7 +21,7 @@
     ]
   },
   "mixins": [
-    "example_mod.mixins.json",
+    "satisfying_buttons.mixins.json",
     "${id}-common.mixins.json"
   ],
   "depends": {
